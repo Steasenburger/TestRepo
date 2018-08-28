@@ -1,0 +1,45 @@
+<script>
+'use strict'
+  var name = '';
+  var alter = '';
+  var eingabe = '';
+  var text = '';
+  
+  name = prompt('Bitte geben sie einen Namen ein !' , name);
+  alter = prompt('Bitte geben sie ihr Alter ein!' , alter);
+ 
+ if (isNaN(alter)) {
+	 eingabe = 'dumm';
+ }
+ else if (alter < 18){
+	eingabe = 'zujung';
+ }
+ else if (alter == 18){
+	 eingabe = 'geburtstag';
+ }
+ 
+ else {
+	 eingabe = 'okay';
+ }
+ 
+ switch (eingabe) {
+	case 'zujung':
+	text = 'Du bist leider zu jung';
+	break;
+	
+	case 'geburtstag':
+	text = 'Alles Gute!';
+	break;
+	
+	case 'dumm':
+	text = 'Keinen Text eingegeben';
+	break;
+	
+	default:
+	text = 'Hallo ' + name;
+	break;
+ }
+ 
+ alert (text);
+ 
+</script>
